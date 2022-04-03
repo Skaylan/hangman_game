@@ -17,7 +17,7 @@ window.onload = () => {
     fruitChoice = fruitChoice.split("")
     fruitChoice.forEach(element => {
         hit.push("_")
-        slash_display.innerHTML = hit
+        slash_display.innerHTML = String(hit).replaceAll(",", " ")
     });
 
     buttons.forEach(button => {
@@ -29,7 +29,7 @@ window.onload = () => {
                 for (let i=0; i<fruitChoice.length; i++) {
                     if (button.value === fruitChoice[i]) {
                         hit[i] = fruitChoice[i]
-                        slash_display.innerHTML = hit
+                        slash_display.innerHTML = String(hit).replaceAll(",", " ")
                         if (String(hit) === String(fruitChoice)) {
                             await sleep(.1)
                             modal_content.innerHTML = 'Parabéns, Você acertou! 🥳'
