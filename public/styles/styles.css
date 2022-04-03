@@ -216,4 +216,8 @@ footer p {
   color: #E0E1DD;
   text-align: center;
 }
+
+footer p a {
+  color: #E0E1DD;
+}
 /*# sourceMappingURL=styles.css.map */

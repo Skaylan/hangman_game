@@ -133,5 +133,8 @@ footer {
     p {
         color: $main_text_color;
         text-align: center;
+        a {
+            color: $main_text_color;
+        }
     }
 }
