@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import './variables';
+@import './utils';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', 'sans-serif' ;
+}
+
+body {
+    @include flexContainerCenter(column);
+    background: $backgournd_color1
+}
+
+header {
+    @include flexContainerCenter(row);
+    width: 100%;
+    height: 10vh;
+    background: $backgournd_color2;
+    text-align: center;
+    .title {
+        h1 {
+            color: $main_text_color;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+main {
+    @include flexContainerCenter(row);
+    width: 100vw;
+    height: 85vh;
+
+    .container {
+        @include flexContainerCenter(column);
+        width: 800px;
+        height: 500px;
+        background: $backgournd_color2;
+        gap: 1rem;
+
+        .title {
+            h3 {
+                color: $main_text_color;
+            }
+        }
+
+        .modal {
+            @include flexContainerCenter(column);
+            visibility: hidden;
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: $backgournd_color1 ;
+            color: $main_text_color;
+            gap: 1rem;
+
+            #modal_content {
+                text-align: center;
+                font-size: 1.5rem;
+                color: $main_text_color;
+            }
+
+            #close_cross {
+                position: absolute;
+                font-size: 1.5rem;
+                top: 15px;
+                right: 30px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .close_button {
+                text-align: center;
+                width: 100px;
+                height: 30px;
+                outline: none;
+                border: none;
+                background-color: $button_color;
+                color: $main_text_color;
+                font-size: 1.2rem;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover {
+                    background: $button_color_hover;
+                }
+            }
+        }
+
+        .display_chances_container {
+            #display_chances {
+                font-size: 1.5rem;
+                color: $main_text_color;
+            }
+        }
+        
+        .display_slashs {
+            color: $main_text_color;
+            font-size: 4rem;
+        }
+
+        .buttons_container {
+            @include flexContainerCenter(row);
+            flex-wrap: wrap;
+            width: 300px;
+            height: 200px;
+            gap: .5rem;
+
+            .button {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+                border: none;
+                cursor: pointer;
+                background: $button_color;
+                color: $main_text_color;
+                border-radius: 5px;
+                &:hover {
+                    background: $button_color_hover;
+                }
+            }
+
+        }
+    }
+}
+
+
+footer {
+    @include flexContainerCenter(row);
+    width: 100%;
+    height: 5vh;
+    p {
+        color: $main_text_color;
+        text-align: center;
+    }
+}
