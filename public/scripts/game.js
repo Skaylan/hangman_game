@@ -65,6 +65,7 @@ window.onload = () => {
 
     close_cross.addEventListener('click', () => {
         modal.style.visibility = 'hidden'
+        window.location.reload()
     })
     close_button.addEventListener('click', () => {
         modal.style.visibility = 'hidden'
