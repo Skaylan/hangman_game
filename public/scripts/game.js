@@ -34,6 +34,11 @@ window.onload = () => {
                             await sleep(.1)
                             modal_content.innerHTML = 'Parabéns, Você acertou! 🥳'
                             modal.style.visibility = 'visible'
+                            close_cross.addEventListener('click', () => {
+                                modal.style.visibility = 'hidden'
+                                window.location.reload()
+                            })
+
                             close_button.addEventListener('click', () => {
                                 modal.style.visibility = 'hidden'
                                 window.location.reload()
@@ -44,6 +49,10 @@ window.onload = () => {
                         if (chances <= 0) {
                             modal_content.innerHTML = 'Que pena, Você perdeu! 😢, a palavra era ' + String(fruitChoice).replaceAll(",", "") + "!"
                             modal.style.visibility = 'visible'
+                            close_cross.addEventListener('click', () => {
+                                modal.style.visibility = 'hidden'
+                                window.location.reload()
+                            })
                             close_button.addEventListener('click', () => {
                                 modal.style.visibility = 'hidden'
                                 window.location.reload()
@@ -65,7 +74,6 @@ window.onload = () => {
 
     close_cross.addEventListener('click', () => {
         modal.style.visibility = 'hidden'
-        window.location.reload()
     })
     close_button.addEventListener('click', () => {
         modal.style.visibility = 'hidden'
