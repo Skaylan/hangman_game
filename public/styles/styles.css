@@ -120,6 +120,15 @@ main .container .display_dash {
   text-align: center;
   font-size: 4rem;
 }
+main .container .display_dash .loader {
+  border: 7px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 7px solid #4b20c2;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 0.5s linear infinite;
+          animation: spin 0.5s linear infinite;
+}
 main .container .buttons_container {
   display: flex;
   flex-direction: row;
@@ -173,5 +182,21 @@ footer p a {
 @media (max-width: 350px) {
   header .title span {
     font-size: 1rem;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=styles.css.map */

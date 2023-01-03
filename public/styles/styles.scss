@@ -66,6 +66,7 @@ main {
         background: $backgournd_color2;
         gap: 1rem;
 
+
         .title {
             h3 {
                 color: $main_text_color;
@@ -125,6 +126,15 @@ main {
             color: $main_text_color;
             text-align: center;
             font-size: 4rem;
+
+            .loader {
+                border: 7px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 7px solid #4b20c2;
+                width: 40px;
+                height: 40px;
+                animation: spin .5s linear infinite;
+            }
         }
 
         .buttons_container {
@@ -189,4 +199,10 @@ footer {
             }
         }
     }
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+
 }
