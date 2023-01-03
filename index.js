@@ -10,5 +10,5 @@ app.get((req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Server rinning on http://localhost:${PORT}`)
+    console.log(`Server rinning on http://127.0.0.1:${PORT}`)
 })
